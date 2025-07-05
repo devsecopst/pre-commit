@@ -10,5 +10,5 @@ repos:
         pass_filenames: false
         exclude_types: [yaml,xml,shell]
         exclude: '\.(txt|log)$'
-        description: "used to conduct semgrep code and secrets scans only - Shahid Org."
+        description: "used to conduct semgrep code and secrets scans only - Shahid Org"
         verbose: true

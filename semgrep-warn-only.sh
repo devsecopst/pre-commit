@@ -2,7 +2,6 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
-
 #to avoid semgrep errors, exports local project not to fetch remote repo.
 export SEMGREP_REPO_URL=local://my-local-project
 #get Staged files.
