@@ -1,8 +1,8 @@
 - id: semgrep-warn-only
   name: Devsecops-Semgrep Warn-Only
   description: Used to conduct semgrep code and secrets scans only - Shahid#Org.
-  entry: bash /Users/emran/vulnado/semgrep-warn-only.sh
-  language: system
+  entry: semgrep-warn-only.sh
+  language: script
   stages: [pre-commit]
   pass_filenames: false
   exclude_types: [yaml,xml,shell]
