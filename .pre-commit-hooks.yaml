@@ -1,14 +1,10 @@
-default_stages: [pre-commit]
-repos:
-  - repo: local
-    hooks:
-      - id: semgrep-warn-only
-        name: Devsecops-Semgrep Warn-Only
-        entry: bash semgrep-warn-only.sh
-        language: system
-        stages: [pre-commit]
-        pass_filenames: false
-        exclude_types: [yaml,xml,shell]
-        exclude: '\.(txt|log)$'
-        description: "used to conduct semgrep code and secrets scans only - Shahid#Org"
-        verbose: true
+- id: semgrep-warn-only
+  name: Devsecops-Semgrep Warn-Only
+  description: Used to conduct semgrep code and secrets scans only - Shahid Org.
+  entry: bash semgrep-warn-only.sh
+  language: system
+  stages: [pre-commit]
+  pass_filenames: false
+  exclude_types: [yaml,xml,shell]
+  exclude: '\.(txt|log)$'
+  verbose: true
