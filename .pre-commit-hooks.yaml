@@ -1,6 +1,6 @@
 - id: semgrep-warn-only
   name: Devsecops-Semgrep Warn-Only
-  description: Used to conduct semgrep code and secrets scans only - Shahid#Org.
+  description: Used to conduct semgrep code and secrets scans only.
   entry: semgrep-warn-only.sh
   language: script
   stages: [pre-commit]
