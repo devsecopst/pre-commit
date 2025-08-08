@@ -16,8 +16,14 @@ fi
 
 echo "🔍 Running Semgrep scan (warn-only)..."
 #one time execution.
+
 semgrep login 1>/dev/null
+
+#=============semgrepCI
 #semgrep ci --code --secrets --include $staged_Files --dry-run 2>/dev/null
+
+#===========semgrepSCAN
+semgrep scan --config='p/comment' --config='p/secrets' --config='p/gitleaks' --error --skip-unknown-extensions
 
 echo -e "\n${GREEN}✔️Semgre Security code scan completed.\n\r${NC} ${RED}📄 For any questions or concerns, please contact the Security Team.${NC}"
 exit 0
