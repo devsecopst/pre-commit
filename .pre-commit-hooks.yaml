@@ -1,10 +1,13 @@
-- id: semgrep-warn-only
-  name: Devsecops-Semgrep Warn-Only
-  description: Used to conduct semgrep code and secrets scans only.
-  entry: semgrep-warn-only.sh
-  language: script
-  stages: [pre-commit]
-  pass_filenames: false
-  exclude_types: [yaml,xml,shell]
-  exclude: '\.(txt|log)$'
+- id: semgrep
+  name: semgrep
+  entry: semgrep
+  language: system
+  args:
+    - --config
+    - p/secrets
+    - --config
+    - p/comment
+    - --config
+    - p/gitleaks
   verbose: true
+
