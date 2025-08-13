@@ -1,5 +1,5 @@
 - id: semgrep-warn-only
-  name: Devsecops-Semgrep Warn-Only!
+  name: Devsecops-Semgrep Warn-Only!!
   description: Used to conduct semgrep code and secrets scans only.
   entry: bash
   language: system
