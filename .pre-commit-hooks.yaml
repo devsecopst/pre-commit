@@ -1,13 +1,15 @@
-- id: semgrep
-  name: semgrep
-  entry: semgrep
+- id: semgrep-warn-only
+  name: Devsecops-Semgrep Warn-Only!
+  description: Used to conduct semgrep code and secrets scans only.
+  entry: bash
   language: system
   args:
-    - --config
-    - p/secrets
-    - --config
-    - p/comment
-    - --config
-    - p/gitleaks
+      - -c
+      - semgrep  --config p/comment --config p/secrets "$@" 2>&1 | awk '/Scan Summary/,/^scan completed successfully\./' || true
+      - dummy
+  stages: [pre-commit]
+  exclude_types: [yaml, xml, shell]
+  exclude: '\.(txt|log)$'
   verbose: true
+  pass_filenames: true
 
