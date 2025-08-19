@@ -9,7 +9,6 @@
       - dummy
   stages: [pre-commit]
   pass_filenames: true
-  exclude_types: [yaml, xml, shell]
   exclude: '\.(txt|log)$'
   verbose: true
 
